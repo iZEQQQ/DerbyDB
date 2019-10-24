@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="net.jgorny.friendsdatabase.controller.ViewCatalogController"
+            prefHeight="400.0" prefWidth="400.0">
+
+    <center>
+        <TableView fx:id="table">
+            <columns>
+                <TableColumn text="id" >
+                    <cellValueFactory>
+                        <PropertyValueFactory property="id"  />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn text="name">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="name" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn text="surname">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="surname"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn text="age">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="age"/>
+                    </cellValueFactory>
+                </TableColumn>
+
+            </columns>
+        </TableView>
+    </center>
+    <bottom>
+        <HBox>
+            <Button text="add" onAction="#add"/>
+            <Button text="delete" onAction="#delete"/>
+            <Button text="edit" onAction="#edit"/>
+        </HBox>
+    </bottom>
+</BorderPane>
